@@ -18,34 +18,32 @@
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(!empty($_POST['hunt'])){
-                $query = mysql_query("SELECT * from answer, users WHERE users.email='$user' and users.current = answer.question"); //Query the users table if there are matching rows equal to $username
-                $exists = mysql_num_rows($query); //Checks if username exists
-                if($exists > 0) //IF there are no returning rows or no existing username
+                $query = mysql_query("SELECT * from answer, users WHERE users.email='$user' and users.current = answer.question");
+                $exists = mysql_num_rows($query);
+                if($exists > 0)
                 {
-                    while($row = mysql_fetch_assoc($query)) //display all rows from query
+                    while($row = mysql_fetch_assoc($query))
                     {
                         $table_answer = $row['answer']; 
                     }
                     if(strtolower($table_answer) == strtolower($_POST["answer"])){
-                        $query = mysql_query("UPDATE users set current = current + 1, users.timestamp=CURRENT_TIMESTAMP where  users.email='$user'"); //Query the users table if there are matching rows equal to $username
+                        $query = mysql_query("UPDATE users set current = current + 1, users.timestamp=CURRENT_TIMESTAMP where  users.email='$user'");
                     }
                     
                 }
                 else
                 {
-                    echo( '<script>alert("Wrong Answer!!!");</script>'); //Prompts the user
-                    //Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
+                    echo( '<script>alert("Wrong Answer!!!");</script>');
                 }
             }
         }
-        $query = mysql_query("SELECT * from answer, users WHERE users.email='$user' and users.current = answer.question"); //Query the users table if there are matching rows equal to $username
-        $exists = mysql_num_rows($query); //Checks if username exists
-        if($exists > 0) //IF there are no returning rows or no existing username
+        $query = mysql_query("SELECT * from answer, users WHERE users.email='$user' and users.current = answer.question");
+        $exists = mysql_num_rows($query);
+        if($exists > 0)
         {
-            while($row = mysql_fetch_assoc($query)) //display all rows from query
+            while($row = mysql_fetch_assoc($query))
             {
-                $table_question = $row['question']; // the first username row is passed on to $table_users, and so on until the query is finished
-                // $table_answer = $row['answer']; // the first password row is passed on to $table_users, and so on until the query is finished
+                $table_question = $row['question'];
                 $table_hint = $row['hint'];
             }
             if($table_hint == "end"){
@@ -54,21 +52,7 @@
         }
         else
         {
-            $query = mysql_query("SELECT * from  users WHERE users.email='$user' and users.current = answer.question"); //Query the users table if there are matching rows equal to $username
-            $exists = mysql_num_rows($query); //Checks if username exists
-            if($exists > 0) //IF there are no returning rows or no existing username
-            {
-                while($row = mysql_fetch_assoc($query)) //display all rows from query
-                {
-                    $table_question = $row['question']; // the first username row is passed on to $table_users, and so on until the query is finished
-                    // $table_answer = $row['answer']; // the first password row is passed on to $table_users, and so on until the query is finished
-                    $table_hint = $row['hint'];
-                }
-            }
-            else{
-                Print '<script>alert("Somethings Wrong, contact admin");</script>'; //Prompts the user
-                //Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
-            }
+                Print '<script>alert("Somethings Wrong, contact admin");</script>';
         }
     ?>
 
