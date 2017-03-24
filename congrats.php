@@ -9,7 +9,7 @@
     <div id="frame">  
         <h1>CONGRATULATIONS</h1>
         <form>
-            
+            <img src="images/comgrats.jpeg" alt="congrats">
         </form>
     </div>
 </body>

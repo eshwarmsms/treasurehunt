@@ -48,16 +48,27 @@
                 // $table_answer = $row['answer']; // the first password row is passed on to $table_users, and so on until the query is finished
                 $table_hint = $row['hint'];
             }
-            
-            if($table_question == 31){
+            if($table_hint == "end"){
                 header("location:congrats.php");
             }
-            
         }
         else
         {
-            Print '<script>alert("Somethings Wrong, contact admin");</script>'; //Prompts the user
-            //Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
+            $query = mysql_query("SELECT * from  users WHERE users.email='$user' and users.current = answer.question"); //Query the users table if there are matching rows equal to $username
+            $exists = mysql_num_rows($query); //Checks if username exists
+            if($exists > 0) //IF there are no returning rows or no existing username
+            {
+                while($row = mysql_fetch_assoc($query)) //display all rows from query
+                {
+                    $table_question = $row['question']; // the first username row is passed on to $table_users, and so on until the query is finished
+                    // $table_answer = $row['answer']; // the first password row is passed on to $table_users, and so on until the query is finished
+                    $table_hint = $row['hint'];
+                }
+            }
+            else{
+                Print '<script>alert("Somethings Wrong, contact admin");</script>'; //Prompts the user
+                //Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
+            }
         }
     ?>
 
