@@ -25,7 +25,10 @@
 			margin-left: auto;
 			text-align:center;
 			max-width:800px;
-			padding:5%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+			padding-left:5%;
+            padding-right:5%;
 			box-shadow: 0 8px 6px -6px black;
 			background-color: wheat;
 		}
