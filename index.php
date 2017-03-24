@@ -41,7 +41,7 @@
 		<form method="post" action="index.php" name="ContactForm">
 			<img src="kalam.jpg" alt="image"></img><br>
 			<p>Email: <input type="text" size="65" name="logusername"></p>
-			<p>Password: <input type="text" size="65" name="logpassword"></p>
+			<p>Password: <input type="password" size="65" name="logpassword"></p>
 			<p><input type="submit" value="Login" name="submit">
 			<input type="reset" value="Reset" name="reset"></p>
 		</form>
@@ -72,6 +72,7 @@
 				{
 					if($password == $table_password)
 					{
+						echo "successful login";
 						$_SESSION['user'] = $username; //set the username in a session. This serves as a global variable
 						header("location: form.php"); // redirects the user to the authenticated home page
 					}
