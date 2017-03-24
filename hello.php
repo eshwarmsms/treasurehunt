@@ -19,8 +19,8 @@
 			{
 				while($row = mysql_fetch_assoc($query)) //display all rows from query
 				{
-					$table_users = $row['username']; // the first username row is passed on to $table_users, and so on until the query is finished
-					$table_password = $row['password']; // the first password row is passed on to $table_users, and so on until the query is finished
+					$table_users = $row['email']; // the first username row is passed on to $table_users, and so on until the query is finished
+					$table_password = $row['pass']; // the first password row is passed on to $table_users, and so on until the query is finished
 					echo("$table_users $table_password <br>");
 				}
 				if(($username == $table_users) && ($password == $table_password)) // checks if there are any matching fields
