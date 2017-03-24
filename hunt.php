@@ -60,9 +60,10 @@
 
     <div id="frame">  
         <h1>PUZZLE <?php echo($table_question) ?></h1>
-        <form action="logout.php">
+        <form>
             Welcome <span><?php echo($user) ?></span>
-            <input type="submit" value="LOGOUT" name="logout" id="logout">
+            <a href="/leaderboard.php">LEADERBOARD</a>
+            <a href="/logout.php">LOGOUT</a>
         </form>
         <form method="post" action="hunt.php" name="ContactForm" onsubmit="return ValidateContactForm();">
             <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>

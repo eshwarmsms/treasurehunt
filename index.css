@@ -66,3 +66,13 @@ th, td{
 #input{
     width: 80%;
 }
+a{
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    background: rgba(0 , 0, 0, 0.2);
+}
+a:hover{
+    text-decoration: none;
+    background: rgba(0 , 0, 0, 0.5);
+}
