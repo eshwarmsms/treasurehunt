@@ -44,6 +44,8 @@ form{
     font-family:cooper;
     font-size: 20px;
     float:center;
+    min-height: 50px;
+    padding: 5px;
     /*border:1px solid lightcoral;*/
     box-shadow: 0 8px 6px -6px black;
 }
@@ -74,6 +76,7 @@ a{
     margin: 2px 2px;
     cursor: pointer;
     box-sizing: border-box;
+    font-size: 1em;
 }
 a:hover{
     text-decoration: none;
