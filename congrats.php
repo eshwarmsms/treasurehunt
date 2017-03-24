@@ -35,8 +35,7 @@
         }
 
     ?>
-    <div id="frame">  
-        Welcome <strong><?php echo($user) ?></strong>
+    <div id="frame">
         <a href="/leaderboard.php">LEADERBOARD</a>
         <a href="/logout.php">LOGOUT</a>
         <h1>CONGRATULATIONS, <strong><?php echo($user) ?></strong></h1>
