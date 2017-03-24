@@ -31,11 +31,24 @@
 
 		}
 
-		h1 {background-color:black; color:white; text-align:center;}
-		#footer {background-color:black; color:white; clear:both; text-align:center; padding:5px;
+		h1 {
+            background-color:black; 
+            color:white; 
+            text-align:center;}
+		#footer {
+            background-color:black; 
+            color:white; clear:both; 
+            text-align:center; 
+            padding:5px;
 		}
 		form{
-			background-color:#484E53;font-family:cooper;font-size: 20px; float:center;border:2px solid green;box-shadow: 0 8px 6px -6px black;
+            color: white;
+			background-color:#484E53;
+            font-family:cooper;
+            font-size: 20px; 
+            float:center;
+            border:2px solid green;
+            box-shadow: 0 8px 6px -6px black;
 		}
     </style>
 </head>
@@ -96,13 +109,11 @@ else
 }
 ?>
 
-<div id="user">  
-    <?php echo($user) ?>
+<div id="frame">  
     <form action="logout.php">
-        <input type="submit" value="LOGOUT" name="logout">
+        <span><?php echo($user) ?></span>
+        <input type="submit" value="LOGOUT" name="logout" style="float:right;">
     </form>
-</div>
-<div id="frame">
     <form method="post" action="hunt.php" name="ContactForm" onsubmit="return ValidateContactForm();">
         <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>
         <p>Hint: first letter is <?php echo($table_hint) ?> </p>
