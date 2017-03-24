@@ -63,6 +63,9 @@
         #logout{
             right: 10px;
         }
+        #input{
+            width: 80%;
+        }
     </style>
 </head>
 <body>
@@ -132,7 +135,7 @@ else
         <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>
         <p>Hint: <?php echo($table_hint) ?> </p>
         <p>Answer: </p>
-        <p><input type="text" size="65" name="answer"></p>
+        <p><input type="text" name="answer" id="input"></p>
         <p><input type="submit" value="Send" name="hunt">
         <input type="reset" value="Reset" name="reset"></p>
     </form>
