@@ -14,30 +14,25 @@
                     <th>USER</th>
                     <th>PUZZLE SOLVED</th>
                 </tr>
-                <tr>
-                    <td>ESHWAR</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>ESHWAR</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>ESHWAR</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>ESHWAR</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>ESHWAR</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>ESHWAR</td>
-                    <td>3</td>
-                </tr>
+                <?php 
+                    mysql_connect("in-cdbr-azure-south-c.cloudapp.net", "bf142daa6c0a1f","97095cdc", "treasurehunt") or die(mysql_error()); //Connect to server
+                    mysql_select_db("treasurehunt") or die("Cannot connect to database"); //Connect to database
+
+                    $query = mysql_query("SELECT * from users order by current"); //Query the users table if there are matching rows equal to $username
+                    $exists = mysql_num_rows($query); //Checks if username exists
+                    if($exists > 0) //IF there are no returning rows or no existing username
+                    {
+                        while($row = mysql_fetch_assoc($query)) //display all rows from query
+                        {
+                            $c = intval($row["current"]) - 1;
+                            echo("<tr>");
+                                echo("<td>".$row["email"]."</td>");
+                                echo("<td>".$c."</td>");
+                            echo("</tr>"); 
+                        }
+                        
+                    }
+                ?>
             </table>
         </form>
     </div>
