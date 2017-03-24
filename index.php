@@ -33,7 +33,7 @@
 </head>
 <body>
 	<?php
-		mysql_connect("in-cdbr-azure-south-c.cloudapp.net", "bf142daa6c0a1f","97095cdc", "first_db") or die(mysql_error()); //Connect to server
+		mysql_connect("in-cdbr-azure-south-c.cloudapp.net", "bf142daa6c0a1f","97095cdc", "treasurehunt") or die(mysql_error()); //Connect to server
 		mysql_select_db("treasurehunt") or die("Cannot connect to database"); //Connect to database
 	?>
 	<div style="margin-right: auto;margin-left: auto;text-align:center;max-width:800px;padding:80px;box-shadow: 0 8px 6px -6px black;";>
