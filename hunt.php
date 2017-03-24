@@ -2,31 +2,41 @@
 <head>    
     <title>Treasure Hunt</title>
     <style>
-    input[type=submit] , [type=reset]{
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        text-decoration: none;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
-    body{
-        background-color: #B6C5D0;
-        
-    }
-    img{
-        max-width:50%;
-        max-height:50%;
+   input[type=submit] , [type=reset]{
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-decoration: none;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		#frame{
+			
+			margin-right: auto;
+			margin-left: auto;
+			text-align:center;
+			max-width:800px;
+			padding:80px;
+			box-shadow: 0 8px 6px -6px black;
+			background-color: wheat;
+		}
+		body{
+			background-color: #B6C5D0;
+			
+		}
+		img{
+			max-width:50%;
+			max-height:50%;
 
-    }
+		}
 
-    h1 {background-color:black; color:white; text-align:center;}
-    #footer {background-color:black; color:white; clear:both; text-align:center; padding:5px;
-    }
-    form{
-        background-color:#484E53;font-family:cooper;font-size: 20px; float:center;border:2px solid green;box-shadow: 0 8px 6px -6px black;
-    }
+		h1 {background-color:black; color:white; text-align:center;}
+		#footer {background-color:black; color:white; clear:both; text-align:center; padding:5px;
+		}
+		form{
+			background-color:#484E53;font-family:cooper;font-size: 20px; float:center;border:2px solid green;box-shadow: 0 8px 6px -6px black;
+		}
     </style>
 </head>
 <body>
@@ -86,16 +96,20 @@ else
 }
 ?>
 
-
-<div style="margin-right: auto;margin-left: auto;text-align:center;max-width:800px;padding:80px;box-shadow: 0 8px 6px -6px black;";>
-
-<form method="post" action="hunt.php" name="ContactForm" onsubmit="return ValidateContactForm();">
-    <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>
-    <p>Hint: first letter is <?php echo($table_hint) ?> </p>
-    <p>Answer: <input type="text" size="65" name="answer"></p>
-    <p><input type="submit" value="Send" name="hunt">
-    <input type="reset" value="Reset" name="reset"></p>
-</form>
+<div id="user">  
+    <?php echo($user) ?>
+    <form action="logout.php">
+        <input type="submit" value="LOGOUT" name="logout">
+    </form>
+</div>
+<div id="frame">
+    <form method="post" action="hunt.php" name="ContactForm" onsubmit="return ValidateContactForm();">
+        <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>
+        <p>Hint: first letter is <?php echo($table_hint) ?> </p>
+        <p>Answer: <input type="text" size="65" name="answer"></p>
+        <p><input type="submit" value="Send" name="hunt">
+        <input type="reset" value="Reset" name="reset"></p>
+    </form>
 </div>
 
 </body>
