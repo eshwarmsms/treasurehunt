@@ -38,8 +38,8 @@
 	mysql_select_db("treasurehunt") or die("Cannot connect to database"); //Connect to database
 	    
 	echo("hello");
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-		if (!empty($_POST['checklogin'])) {
+    // if($_SERVER["REQUEST_METHOD"] == "POST"){
+	// 	if (!empty($_POST['checklogin'])) {
 			session_start();
 			$username = "eshwarmsms@gmail.com";
 			$password = "eshwar";
@@ -76,8 +76,8 @@
 				Print '<script>alert("Incorrect Username!");</script>'; //Prompts the user
 				//Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
 			}
-		}
-	}
+	// 	}
+	// }
 ?>
 
 	<div style="margin-right: auto;margin-left: auto;text-align:center;max-width:800px;padding:80px;box-shadow: 0 8px 6px -6px black;";>
