@@ -49,8 +49,8 @@
     if($_SERVER["REQUEST_METHOD"] == "POST"){
 		if (!empty($_POST['login'])) {
 			session_start();
-			$username = "eshwarmsms@gmail.com";
-			$password = "eshwar";
+			$username = $_POST["logusername"];
+			$password = $_POST["logpassword"];
 			$query = mysql_query("SELECT * from users WHERE email='$username'"); //Query the users table if there are matching rows equal to $username
 			$exists = mysql_num_rows($query); //Checks if username exists
 			$table_users = "";
