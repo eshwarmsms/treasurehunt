@@ -9,9 +9,7 @@
 <?php
 	session_start(); //starts the session
 	if($_SESSION['user']){ //checks if user is logged in
-	}
-	else{
-		header("location:index.php"); // redirects if user is not logged in
+		header("location:hunt.php"); // redirects if user is not logged in
 	}
 	mysql_connect("in-cdbr-azure-south-c.cloudapp.net", "bf142daa6c0a1f","97095cdc", "treasurehunt") or die(mysql_error()); //Connect to server
 	mysql_select_db("treasurehunt") or die("Cannot connect to database"); //Connect to database
