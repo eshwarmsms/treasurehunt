@@ -61,7 +61,7 @@
     ?>
 
     <div id="frame">  
-        <h1>PUZZULE <?php echo($table_question) ?></h1>
+        <h1>PUZZLE <?php echo($table_question) ?></h1>
         <form action="logout.php">
             Welcome <span><?php echo($user) ?></span>
             <input type="submit" value="LOGOUT" name="logout" id="logout">
