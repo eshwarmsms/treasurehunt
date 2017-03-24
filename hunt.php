@@ -2,7 +2,17 @@
 <head>    
     <title>Treasure Hunt</title>
     <style>
-   input[type=submit] , [type=reset]{
+    
+        @media (width: 500px){
+            form{
+                font-size: 15px; 
+            }
+            #frame{
+                
+			    padding:20px;
+            }
+        }
+        input[type=submit] , [type=reset]{
 			background-color: #4CAF50;
 			border: none;
 			color: white;
@@ -12,7 +22,6 @@
 			cursor: pointer;
 		}
 		#frame{
-			
 			margin-right: auto;
 			margin-left: auto;
 			text-align:center;
@@ -45,13 +54,12 @@
 			background-color:#484E53;
             min-height: 60px;
             font-family:cooper;
-            font-size: 20px; 
             float:center;
             border:2px solid green;
             box-shadow: 0 8px 6px -6px black;
 		}
         #logout{
-            left: 10px;
+            right: 10px;
         }
     </style>
 </head>
