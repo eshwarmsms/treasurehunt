@@ -65,7 +65,7 @@
             <a href="/logout.php">LOGOUT</a>
         <!--</form>-->
         <form>
-            <h1>PUZZLE <?php echo($table_question) ?></h1>  
+            <h3>PUZZLE <?php echo($table_question) ?></h3>  
         </form>
         <form method="post" action="hunt.php" name="ContactForm" onsubmit="return ValidateContactForm();">
             <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>
