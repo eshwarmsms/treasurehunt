@@ -7,7 +7,7 @@
 <body>
 
     <div id="frame">
-       Welcome <strong><?php echo($user) ?></strong>
+        <strong><?php echo($user) ?></strong>
         <a href="/hunt.php">PUZZLES</a>
         <a href="/logout.php">LOGOUT</a>
         <h1>LEADERBOARD</h1>
