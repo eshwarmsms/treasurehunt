@@ -59,9 +59,11 @@
     ?>
 
     <div id="frame">  
-        Welcome <span><?php echo($user) ?></span>
-        <a href="/leaderboard.php">LEADERBOARD</a>
-        <a href="/logout.php">LOGOUT</a>
+        Welcome <strong><?php echo($user) ?></strong>
+        <form>
+            <a href="/leaderboard.php">LEADERBOARD</a>
+            <a href="/logout.php">LOGOUT</a>
+        </form>
         <form>
             <h1>PUZZLE <?php echo($table_question) ?></h1>  
         </form>
