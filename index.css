@@ -18,7 +18,7 @@ input[type=submit] , [type=reset]{
     padding-left:5%;
     padding-right:5%;
     box-shadow: 0 8px 6px -6px black;
-    background-color: navajowhite;
+    /*background-color: navajowhite;*/
 }
 body{
     background-color: #B6C5D0;
