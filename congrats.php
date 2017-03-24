@@ -36,7 +36,10 @@
 
     ?>
     <div id="frame">  
-        <h1>CONGRATULATIONS</h1>
+        Welcome <strong><?php echo($user) ?></strong>
+        <a href="/leaderboard.php">LEADERBOARD</a>
+        <a href="/logout.php">LOGOUT</a>
+        <h1>CONGRATULATIONS, <strong><?php echo($user) ?></strong></h1>
         <form>
             <img src="images/congrats.jpeg" alt="congrats">
         </form>
