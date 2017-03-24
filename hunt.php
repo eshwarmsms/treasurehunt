@@ -60,10 +60,10 @@
 
     <div id="frame">  
         Welcome <strong><?php echo($user) ?></strong>
-        <form>
+        <!--<form>-->
             <a href="/leaderboard.php">LEADERBOARD</a>
             <a href="/logout.php">LOGOUT</a>
-        </form>
+        <!--</form>-->
         <form>
             <h1>PUZZLE <?php echo($table_question) ?></h1>  
         </form>
