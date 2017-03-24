@@ -44,7 +44,7 @@ form{
     font-family:cooper;
     font-size: 20px;
     float:center;
-    min-height: 50px;
+    /*min-height: 50px;*/
     padding: 5px;
     /*border:1px solid lightcoral;*/
     box-shadow: 0 8px 6px -6px black;
