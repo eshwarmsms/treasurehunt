@@ -81,10 +81,9 @@
 	<div style="margin-right: auto;margin-left: auto;text-align:center;max-width:800px;padding:80px;box-shadow: 0 8px 6px -6px black;";>
 		<h1>WELCOME TO TREASURE HUNT</h1>
 		<form method="post" action="index.php" name="ContactForm">
-			<img src="kalam.jpg" alt="image"></img><br>
 			<p>Email: <input type="text" size="65" name="logusername"></p>
 			<p>Password: <input type="password" size="65" name="logpassword"></p>
-			<p><input type="submit" value="ogin" name="login">
+			<p><input type="submit" value="Login" name="login">
 			<input type="reset" value="Reset" name="reset"></p>
 		</form>
 	</div>
