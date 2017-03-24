@@ -28,7 +28,6 @@
 		img{
 			max-width:50%;
 			max-height:50%;
-
 		}
 
 		h1 {
@@ -51,6 +50,9 @@
             border:2px solid green;
             box-shadow: 0 8px 6px -6px black;
 		}
+        #logout{
+            left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -113,12 +115,13 @@ else
 <div id="frame">  
     <form action="logout.php">
         Welcome <span><?php echo($user) ?></span>
-        <input type="submit" value="LOGOUT" name="logout" style="float:right;">
+        <input type="submit" value="LOGOUT" name="logout" id="logout">
     </form>
     <form method="post" action="hunt.php" name="ContactForm" onsubmit="return ValidateContactForm();">
         <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>
         <p>Hint: <?php echo($table_hint) ?> </p>
-        <p>Answer: <input type="text" size="65" name="answer"></p>
+        <p>Answer: </p>
+        <p><input type="text" size="65" name="answer"></p>
         <p><input type="submit" value="Send" name="hunt">
         <input type="reset" value="Reset" name="reset"></p>
     </form>
