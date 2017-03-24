@@ -55,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $table_answer = $row['answer']; 
             }
             if($table_answer == $_POST["answer"]){
-                $query = mysql_query("UPDATE users set current = current + 1, users.timestamp='CURRENT_TIMESTAMP' where  users.email='$user'"); //Query the users table if there are matching rows equal to $username
+                $query = mysql_query("UPDATE users set current = current + 1, users.timestamp=CURRENT_TIMESTAMP where  users.email='$user'"); //Query the users table if there are matching rows equal to $username
             }
             
         }
