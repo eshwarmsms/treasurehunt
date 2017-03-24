@@ -66,6 +66,15 @@
         #input{
             width: 80%;
         }
+        table{
+            width:100%;
+            border: 1px solid black;
+            border-collapse: collapse;
+            sortable: sortable;
+        }
+        th, td{
+            width: 50%;
+        }
     </style>
 </head>
 <body>
