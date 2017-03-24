@@ -43,6 +43,30 @@ $user = $_SESSION['user']; //assigns user value
     
 mysql_connect("in-cdbr-azure-south-c.cloudapp.net", "bf142daa6c0a1f","97095cdc", "treasurehunt") or die(mysql_error()); //Connect to server
 mysql_select_db("treasurehunt") or die("Cannot connect to database"); //Connect to database
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    if(!empty($_POST['hunt'])){
+        $query = mysql_query("SELECT * from answer, users WHERE users.email='$user' and users.current = answer.question"); //Query the users table if there are matching rows equal to $username
+        $exists = mysql_num_rows($query); //Checks if username exists
+        if($exists > 0) //IF there are no returning rows or no existing username
+        {
+            while($row = mysql_fetch_assoc($query)) //display all rows from query
+            {
+                $table_answer = $row['answer']; 
+            }
+            if($table_answer == $_POST["answer"]){
+                $query = mysql_query("UPDATE users set current = current + 1 where  users.email='$user'"); //Query the users table if there are matching rows equal to $username
+            }
+            
+        }
+        else
+        {
+            Print '<script>alert("Somethings Wrong, contact admin");</script>'; //Prompts the user
+            //Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
+        }
+    }
+}
+
 $query = mysql_query("SELECT * from answer, users WHERE users.email='$user' and users.current = answer.question"); //Query the users table if there are matching rows equal to $username
 $exists = mysql_num_rows($query); //Checks if username exists
 if($exists > 0) //IF there are no returning rows or no existing username
@@ -68,8 +92,8 @@ else
 <form method="post" action="form.php" name="ContactForm" onsubmit="return ValidateContactForm();">
     <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>
     <p>Hint: first letter is <?php echo($table_hint) ?> </p>
-    <p>Answer: <input type="text" size="65" name="Name"></p>
-    <p><input type="submit" value="Send" name="submit">
+    <p>Answer: <input type="text" size="65" name="answer"></p>
+    <p><input type="submit" value="Send" name="hunt">
     <input type="reset" value="Reset" name="reset"></p>
 </form>
 </div>
