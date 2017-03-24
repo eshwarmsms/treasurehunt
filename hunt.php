@@ -66,7 +66,7 @@ else
 <div style="margin-right: auto;margin-left: auto;text-align:center;max-width:800px;padding:80px;box-shadow: 0 8px 6px -6px black;";>
 
 <form method="post" action="form.php" name="ContactForm" onsubmit="return ValidateContactForm();">
-    <img src="<?php echo("images/" +$table_question+ ".png") ?>" alt="image"></img><br>
+    <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>
     <p>Hint: first letter is <?php echo($table_hint) ?> </p>
     <p>Answer: <input type="text" size="65" name="Name"></p>
     <p><input type="submit" value="Send" name="submit">
