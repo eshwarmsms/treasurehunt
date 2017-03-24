@@ -38,10 +38,10 @@
 			max-height:50%;
 		}
 
-		h1 {
+		/*h1 {
             background-color:black; 
             color:white; 
-            text-align:center;}
+            text-align:center;}*/
 		#footer {
             background-color:black; 
             color:white; clear:both; 
