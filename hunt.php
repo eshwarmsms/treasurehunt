@@ -59,12 +59,11 @@
     ?>
 
     <div id="frame">  
-        <h1>PUZZLE <?php echo($table_question) ?></h1>
+        Welcome <span><?php echo($user) ?></span>
+        <a href="/leaderboard.php">LEADERBOARD</a>
+        <a href="/logout.php">LOGOUT</a>
         <form>
-            Welcome <span><?php echo($user) ?></span>
-            <br>
-            <a href="/leaderboard.php">LEADERBOARD</a>
-            <a href="/logout.php">LOGOUT</a>
+            <h1>PUZZLE <?php echo($table_question) ?></h1>  
         </form>
         <form method="post" action="hunt.php" name="ContactForm" onsubmit="return ValidateContactForm();">
             <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>
