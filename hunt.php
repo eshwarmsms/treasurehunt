@@ -100,7 +100,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
         else
         {
-            Print '<script>alert("Somethings Wrong, contact admin");</script>'; //Prompts the user
+            print '<script>alert("Wrong Answer!!!");</script>'; //Prompts the user
             //Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
         }
     }
