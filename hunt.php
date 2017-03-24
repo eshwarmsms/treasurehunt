@@ -38,7 +38,6 @@
                 }
             }
         }
-
         $query = mysql_query("SELECT * from answer, users WHERE users.email='$user' and users.current = answer.question"); //Query the users table if there are matching rows equal to $username
         $exists = mysql_num_rows($query); //Checks if username exists
         if($exists > 0) //IF there are no returning rows or no existing username
@@ -48,6 +47,10 @@
                 $table_question = $row['question']; // the first username row is passed on to $table_users, and so on until the query is finished
                 // $table_answer = $row['answer']; // the first password row is passed on to $table_users, and so on until the query is finished
                 $table_hint = $row['hint'];
+            }
+            
+            if($table_question == 31){
+                header("location:congrats.php");
             }
             
         }
