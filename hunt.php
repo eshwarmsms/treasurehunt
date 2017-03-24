@@ -43,7 +43,7 @@ $user = $_SESSION['user']; //assigns user value
     
 mysql_connect("in-cdbr-azure-south-c.cloudapp.net", "bf142daa6c0a1f","97095cdc", "treasurehunt") or die(mysql_error()); //Connect to server
 mysql_select_db("treasurehunt") or die("Cannot connect to database"); //Connect to database
-$query = mysql_query("SELECT * from answer, user WHERE answer.email='$user' and users.current = answer.question"); //Query the users table if there are matching rows equal to $username
+$query = mysql_query("SELECT * from answer, users WHERE users.email='$user' and users.current = answer.question"); //Query the users table if there are matching rows equal to $username
 $exists = mysql_num_rows($query); //Checks if username exists
 if($exists > 0) //IF there are no returning rows or no existing username
 {
