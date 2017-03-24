@@ -1,43 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<style>
-		input[type=submit] , [type=reset]{
-			background-color: #4CAF50;
-			border: none;
-			color: white;
-			padding: 16px 32px;
-			text-decoration: none;
-			margin: 4px 2px;
-			cursor: pointer;
-		}
-		#frame{
-			
-			margin-right: auto;
-			margin-left: auto;
-			text-align:center;
-			max-width:800px;
-			padding:80px;
-			box-shadow: 0 8px 6px -6px black;
-			background-color: wheat;
-		}
-		body{
-			background-color: #B6C5D0;
-			
-		}
-		img{
-			max-width:50%;
-			max-height:50%;
-
-		}
-
-		h1 {background-color:black; color:white; text-align:center;}
-		#footer {background-color:black; color:white; clear:both; text-align:center; padding:5px;
-		}
-		form{
-			background-color:#484E53;font-family:cooper;font-size: 20px; float:center;border:2px solid green;box-shadow: 0 8px 6px -6px black;
-		}
-	</style>
+    <link rel="stylesheet" href="index.css">
 
 	<title>Treasure Hunt</title>
 </head>
