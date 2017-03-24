@@ -48,7 +48,7 @@
 	</div>
 
 <?php
-	echo("hello")
+	echo("hello");
     if($_SERVER["REQUEST_METHOD"] == "POST"){
 		if (!empty($_POST['checklogin'])) {
 			session_start();
