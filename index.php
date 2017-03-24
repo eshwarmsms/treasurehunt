@@ -11,6 +11,16 @@
 			margin: 4px 2px;
 			cursor: pointer;
 		}
+		#frame{
+			
+			margin-right: auto;
+			margin-left: auto;
+			text-align:center;
+			max-width:800px;
+			padding:80px;
+			box-shadow: 0 8px 6px -6px black;
+			background-color: wheat;
+		}
 		body{
 			background-color: #B6C5D0;
 			
@@ -78,7 +88,7 @@
 	}
 ?>
 
-	<div style="margin-right: auto;margin-left: auto;text-align:center;max-width:800px;padding:80px;box-shadow: 0 8px 6px -6px black;";>
+	<div id="frame">
 		<h1>WELCOME TO TREASURE HUNT</h1>
 		<form method="post" action="index.php" name="ContactForm">
 			<p>Email: <input type="text" size="65" name="logusername"></p>
