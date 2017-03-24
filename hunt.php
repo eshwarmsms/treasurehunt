@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-
     <?php
         session_start(); //starts the session
         if($_SESSION['user']){ //checks if user is logged in
@@ -28,7 +26,7 @@
                     {
                         $table_answer = $row['answer']; 
                     }
-                    if($table_answer == $_POST["answer"]){
+                    if(strtolower($table_answer) == strtolower($_POST["answer"])){
                         $query = mysql_query("UPDATE users set current = current + 1, users.timestamp=CURRENT_TIMESTAMP where  users.email='$user'"); //Query the users table if there are matching rows equal to $username
                     }
                     
@@ -71,8 +69,8 @@
             <p>Hint: <?php echo($table_hint) ?> </p>
             <p>Answer: </p>
             <p><input type="text" name="answer" id="input"></p>
-            <p><input type="submit" value="Send" name="hunt">
-            <input type="reset" value="Reset" name="reset"></p>
+            <p><input type="submit" value="SUBMIT" name="hunt">
+            <input type="reset" value="RESET" name="reset"></p>
         </form>
     </div>
 
