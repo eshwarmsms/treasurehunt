@@ -69,9 +69,9 @@ th, td{
 a{
     background-color: #4CAF50;
     color: white;
-    padding: 16px 32px;
+    padding: 2px;;
     text-decoration: none;
-    margin: 4px 2px;
+    margin: 2px 2px;
     cursor: pointer;
     box-sizing: border-box;
 }
