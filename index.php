@@ -55,8 +55,8 @@
 	<div id="frame">
 		<h1>WELCOME TO TREASURE HUNT</h1>
 		<form method="post" action="index.php" name="ContactForm">
-			<p>Email: <input type="text" size="65" name="logusername"></p>
-			<p>Password: <input type="password" size="65" name="logpassword"></p>
+			<p>Email: <input type="text" size="65" name="logusername" id="input"></p>
+			<p>Password: <input type="password" size="65" name="logpassword" id="input"></p>
 			<p><input type="submit" value="Login" name="login">
 			<input type="reset" value="Reset" name="reset"></p>
 		</form>
