@@ -8,7 +8,6 @@
                 font-size: 15px; 
             }
             #frame{
-                
 			    padding:20px;
             }
         }
@@ -26,7 +25,7 @@
 			margin-left: auto;
 			text-align:center;
 			max-width:800px;
-			padding:80px;
+			padding:5%;
 			box-shadow: 0 8px 6px -6px black;
 			background-color: wheat;
 		}
