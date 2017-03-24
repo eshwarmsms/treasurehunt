@@ -36,10 +36,8 @@
     
 	mysql_connect("in-cdbr-azure-south-c.cloudapp.net", "bf142daa6c0a1f","97095cdc", "treasurehunt") or die(mysql_error()); //Connect to server
 	mysql_select_db("treasurehunt") or die("Cannot connect to database"); //Connect to database
-	    
-	echo("hello");
-    // if($_SERVER["REQUEST_METHOD"] == "POST"){
-	// 	if (!empty($_POST['checklogin'])) {
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+		if (!empty($_POST['login'])) {
 			session_start();
 			$username = "eshwarmsms@gmail.com";
 			$password = "eshwar";
@@ -76,8 +74,8 @@
 				Print '<script>alert("Incorrect Username!");</script>'; //Prompts the user
 				//Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
 			}
-	// 	}
-	// }
+		}
+	}
 ?>
 
 	<div style="margin-right: auto;margin-left: auto;text-align:center;max-width:800px;padding:80px;box-shadow: 0 8px 6px -6px black;";>
@@ -86,7 +84,7 @@
 			<img src="kalam.jpg" alt="image"></img><br>
 			<p>Email: <input type="text" size="65" name="logusername"></p>
 			<p>Password: <input type="password" size="65" name="logpassword"></p>
-			<p><input type="submit" value="Login" name="submit">
+			<p><input type="submit" value="ogin" name="login">
 			<input type="reset" value="Reset" name="reset"></p>
 		</form>
 	</div>
