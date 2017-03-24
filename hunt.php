@@ -42,8 +42,9 @@
             padding:5px;
 		}
 		form{
-            color: white;
+            /*color: white;*/
 			background-color:#484E53;
+            min-height: 60px;
             font-family:cooper;
             font-size: 20px; 
             float:center;
@@ -111,12 +112,12 @@ else
 
 <div id="frame">  
     <form action="logout.php">
-        <span><?php echo($user) ?></span>
+        Welcome <span><?php echo($user) ?></span>
         <input type="submit" value="LOGOUT" name="logout" style="float:right;">
     </form>
     <form method="post" action="hunt.php" name="ContactForm" onsubmit="return ValidateContactForm();">
         <img src="<?php echo("images/".$table_question.".png") ?>" alt="image"></img><br>
-        <p>Hint: first letter is <?php echo($table_hint) ?> </p>
+        <p>Hint: <?php echo($table_hint) ?> </p>
         <p>Answer: <input type="text" size="65" name="answer"></p>
         <p><input type="submit" value="Send" name="hunt">
         <input type="reset" value="Reset" name="reset"></p>
