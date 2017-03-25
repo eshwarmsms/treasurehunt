@@ -15,7 +15,7 @@
             <p>example:</p>
             <ol>
                 <li>if the picture is taken from <strong>www.somewebsite.com/jkashdf/344</strong> the answer is <strong>somewebsite</strong> and the hint is <strong>s</strong></li>
-                <li>if the picture is taken from <strong>www.blog.somewebsite2.com/jkd the answer is <strong>somewebsite2</strong> not </strong>somewebsite</strong></li>
+                <li>if the picture is taken from <strong>www.blog.somewebsite2.com/jkd</strong> the answer is <strong>somewebsite2</strong> not </strong>somewebsite</strong></li>
             </ol>
         </form>
     </div>
