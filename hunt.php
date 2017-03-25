@@ -60,6 +60,8 @@
     <div id="frame">  
         Welcome <strong><?php echo($user) ?></strong>
         <!--<form>-->
+            <a href="/instructions.php">INSTRUCTIONS</a>
+            <br>
             <a href="/leaderboard.php">LEADERBOARD</a>
             <a href="/logout.php">LOGOUT</a>
         <!--</form>-->
